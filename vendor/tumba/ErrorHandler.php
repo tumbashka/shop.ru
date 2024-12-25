@@ -24,7 +24,7 @@ class ErrorHandler
     #[NoReturn] public function exceptionHandler(\Throwable $e): void
     {
         $this->logError($e->getMessage(), $e->getFile(), $e->getLine());
-        $this->displayError('Исключение', $e->getMessage(), $e->getFile(), $e->getLine(), $e->getCode());
+        $this->displayError('Исключение', $e->getMessage(), $e->getFile(), $e->getLine(), $e->getTraceAsString(), $e->getCode());
     }
 
     #[NoReturn] public function errorHandler($errNo, $errStr, $errFile, $errLine): void
@@ -53,7 +53,7 @@ class ErrorHandler
             FILE_APPEND);
     }
 
-    #[NoReturn] protected function displayError($errNo, $errStr, $errFile, $errLine, $response = 500): void
+    #[NoReturn] protected function displayError($errNo, $errStr, $errFile, $errLine, $errTrace = [], $response = 500): void
     {
         if ($response == 0) {
             $response = 404;

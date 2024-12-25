@@ -1,3 +1,6 @@
 .git/
 .idea/
 tmp/
+config/config_db.php
+vendor/gabordemooij/
+HTML layout/

@@ -5,6 +5,7 @@
  * @var $errStr \tumba\ErrorHandler
  * @var $errFile \tumba\ErrorHandler
  * @var $errLine \tumba\ErrorHandler
+ * @var $errTrace \tumba\ErrorHandler
  */
 
 ?>
@@ -21,6 +22,7 @@
 <p><b>Текст ошибки:</b> <?= $errStr ?></p>
 <p><b>Файл, в котором произошла ошибка:</b> <?= $errFile ?></p>
 <p><b>Строка, в которой произошла ошибка:</b> <?= $errLine ?></p>
+<p><b>Стек выполнения:</b></p><?= '<pre>' . print_r($errTrace, true) . '</pre>';?>
 
 </body>
 </html>

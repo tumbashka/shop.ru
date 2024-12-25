@@ -18,28 +18,37 @@ class Router
         return self::$routes;
     }
 
-    public static function getRoute()
+    public static function getRoute(): array
     {
-
+        return self::$route;
     }
 
 
     public static function dispatch($url): void
     {
+        $url = self::removeQueryString($url);
         if (self::matchRoute($url)) {
+//            debug(self::$route);
+            if(!empty(self::$route['lang'])) {
+                App::$appReg->setProperty('lang', self::$route['lang']);
+            }
             $controller = self::getFormattedControllerPath();
-            if(class_exists($controller)){
+            if (class_exists($controller)) {
+                /** @var AbstractController $controllerObject */
                 $controllerObject = new $controller(self::$route);
+                $controllerObject->getModel();
                 $action = self::getFormattedActionName();
-                if(method_exists($controllerObject, $action)){
+                if (method_exists($controllerObject, $action)) {
                     $controllerObject->$action();
-                } else{
+                    $controllerObject->getView();
+                } else {
                     throw new \Exception("Метод {$controller}::{$action} не найден", 404);
                 }
-            } else{
+            } else {
                 throw new \Exception("Контроллер {$controller} не найден", 404);
             }
         } else {
+
             throw new \Exception("Страница не найдена", 404);
         }
     }
@@ -89,13 +98,23 @@ class Router
         $controller .= self::$route['admin_prefix'];
         $controller .= self::$route['controller'] . 'Controller';
         return $controller;
-    } 
-    
+    }
+
     protected static function getFormattedActionName(): string
     {
         return self::toLowerCamelCase(self::$route['action'] . 'Action');
     }
-    
-    
+
+    protected static function removeQueryString(string $url): string
+    {
+        if ($url) {
+            $params = explode('&', $url, 2);
+           if(false === str_contains($params[0], '=')) {
+               return rtrim($params[0],'/');
+           }
+        }
+        return '';
+    }
+
 }
 
