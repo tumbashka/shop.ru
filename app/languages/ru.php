@@ -31,6 +31,11 @@ return [
     'tpl_to_home' => 'На главную',
     'tpl_total_pagination' => ['товар из', 'товара из', 'товаров из'],
 
+    'tpl_wishlist_add_success' => 'Товар добавлен в избранное',
+    'tpl_wishlist_add_error' => 'Ошибка добавления товара в избранное',
+    'tpl_wishlist_delete_success' => 'Товар удален из избранного',
+    'tpl_wishlist_delete_error' => 'Ошибка удаления товара из избранного',
+
 
 ];
 

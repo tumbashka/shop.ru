@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\AppModel;
+use app\models\WishlistModel;
 use app\widgets\language\Language;
 use RedBeanPHP\R;
 use tumba\AbstractController;
@@ -26,7 +27,9 @@ class AppController extends AbstractController
                         ON c.id = cd.category_id
                         WHERE cd.language_id = ?", [$lang['id']]);
         App::$appReg->setProperty("categories_{$lang['code']}", $categories);
-//        debug( App::$appReg->getProperties());
+
+        App::$appReg->setProperty("wishlist", WishlistModel::getWishlistIDs());
+
     }
 
 }

@@ -19,7 +19,7 @@
                 </a>
             </li>
             <li class="breadcrumb-item">
-                <?= getLang('search_index_search')?>
+                <?= getLang('search_index_search') ?>
             </li>
         </ol>
     </nav>

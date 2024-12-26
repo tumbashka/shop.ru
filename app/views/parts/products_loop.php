@@ -21,7 +21,13 @@
                     <div class="product-links">
                         <a class="add-to-cart" href="cart/add?id=<?= $product['id'] ?>"
                            data-id="<?= $product['id'] ?>"><?= get_cart_icon($product['id']) ?></a>
-                        <a href="#"><i class="far fa-heart"></i></a>
+                        <?php if (in_array($product['id'], \tumba\App::$appReg->getProperty('wishlist'))): ?>
+                            <a class="delete-from-wishlist" href="wishlist/delete?id=<?= $product['id'] ?>"
+                               data-id="<?= $product['id'] ?>"><i class="fas fa-hand-holding-heart"></i></a>
+                        <?php else: ?>
+                            <a class="add-to-wishlist" href="wishlist/add?id=<?= $product['id'] ?>"
+                               data-id="<?= $product['id'] ?>"><i class="far fa-heart"></i></a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

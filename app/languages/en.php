@@ -31,5 +31,10 @@ return [
     'tpl_to_home' => 'To main page',
     'tpl_total_pagination' => ['product out of', 'products out of', 'items out of'],
 
+    'tpl_wishlist_add_success' => 'The product has been added to your favorites',
+    'tpl_wishlist_add_error' => 'Error adding product to favorites',
+    'tpl_wishlist_delete_success' => 'The product has been removed from favorites',
+    'tpl_wishlist_delete_error' => 'Error removing product from favorites',
+
 ];
 
