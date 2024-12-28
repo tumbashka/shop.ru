@@ -57,8 +57,13 @@ use tumba\View;
                             <i class="far fa-user"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><?= getLang('tpl_login') ?></a></li>
-                            <li><a class="dropdown-item" href="#"><?= getLang('tpl_registration') ?></a></li>
+                            <?php if(empty($_SESSION['user'])): ?>
+                                <li><a class="dropdown-item" href="user/signin"><?= getLang('tpl_signin') ?></a></li>
+                                <li><a class="dropdown-item" href="user/signup"><?= getLang('tpl_signup') ?></a></li>
+                            <?php else: ?>
+                                <li><a class="dropdown-item" href="user/cabinet"><?= getLang('tpl_cabinet') ?></a></li>
+                                <li><a class="dropdown-item" href="user/logout"><?= getLang('tpl_logout') ?></a></li>
+                            <?php endif; ?>
                         </ul>
                     </div>
                     <?php new \app\widgets\language\Language() ?>

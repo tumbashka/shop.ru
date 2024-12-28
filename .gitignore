@@ -3,4 +3,5 @@
 tmp/
 config/config_db.php
 vendor/gabordemooij/
+vendor/vlucas/
 HTML layout/

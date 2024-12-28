@@ -18,8 +18,7 @@ class ProductController extends AppController
         if(!$product){
             $this->error404();
             return;
-//            throw new \Exception("Товар по запросу ({$this->route['slug']}) не найден", 404);
-        }
+       }
 
         $breadCrumbs = BreadCrumbsModel::getBreadCrumbs($product['category_id'],$product['title']);
         $gallery = $this->model->get_gallery($product['id']);

@@ -1,4 +1,4 @@
-<div class="modal-body">
+<div class="modal-body" >
     <?php if (!empty($_SESSION['cart'])): ?>
         <div class="table_responsive cart-table">
             <table class="table text-start">

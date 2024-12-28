@@ -107,3 +107,12 @@ function num2word($num, $words)
         }
     }
 }
+
+function sessionFormData($fieldName): string
+{
+    if (isset($_SESSION['form_data'][$fieldName])) {
+        return h($_SESSION['form_data'][$fieldName]);
+    } else {
+        return "";
+    }
+}

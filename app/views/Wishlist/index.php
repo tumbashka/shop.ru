@@ -17,7 +17,7 @@
                     <i class="fas fa-home"></i>
                 </a>
             </li>
-            <li class="breadcrumb-item">
+            <li class="breadcrumb-item active">
                 <?= getLang('wishlist_index_title') ?>
             </li>
         </ol>

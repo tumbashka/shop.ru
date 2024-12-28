@@ -14,14 +14,12 @@ use tumba\View;
             <div class="row">
                 <div class="col-md-3 col-6">
                     <h4><?= getLang('tpl_information') ?></h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#"><?= getLang('tpl_main_page') ?></a></li>
-                        <li><a href="#"><?= getLang('tpl_about') ?></a></li>
-                        <li><a href="#"><?= getLang('tpl_payment_delivery') ?></a></li>
-                        <li><a href="#"><?= getLang('tpl_contacts') ?></a></li>
-                    </ul>
+                    <?php new \app\widgets\page\Page([
+                        'cacheTime' => 0,
+                        'class' => 'list-unstyled',
+                        'prepend' => '<li><a href="' . base_url() . '">' . getLang('tpl_main_page') . '</a></li>'
+                    ]) ?>
                 </div>
-
                 <div class="col-md-3 col-6">
                     <h4><?= getLang('tpl_time_of_work') ?></h4>
                     <ul class="list-unstyled">
@@ -56,7 +54,7 @@ use tumba\View;
     <i class="fas fa-angle-double-up"></i>
 </button>
 
-<div class="modal fade" id="cart-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="cart-modal" tabindex="-1" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
