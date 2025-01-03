@@ -24,6 +24,5 @@ class SearchController extends AppController
         $products = $this->model->getFoundedProducts($s, $lang, $pagination->getStart(), $perPage);
         $this->setMeta(getLang('search_index_search') . ': ' . $s);
         $this->setData(compact('products', 'pagination', 'countProducts', 's'));
-//        debug($products, 1);
     }
 }

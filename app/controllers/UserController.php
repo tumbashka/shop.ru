@@ -125,7 +125,6 @@ class UserController extends AppController
         $start = $pagination->getStart();
 
         $files = $orderModel->getUserDigitalProducts($_SESSION['user']['id'], $start, $perPage, $language);
-//        debug($files,1);
         $this->setData(compact('files', 'pagination', 'total'));
         $this->setMeta(getLang('tpl_orders_files'));
 

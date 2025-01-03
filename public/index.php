@@ -12,9 +12,6 @@ new \tumba\App();
 
 
 
-//debug(\tumba\Router::getRoutes());
-
-
 
 
 

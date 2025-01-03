@@ -86,8 +86,7 @@ class OrderModel extends AppModel
 
             $mail->Body = $body;
             return $mail->send();
-        } catch (Exception $e) {
-//            debug($e,1);
+        } catch (\Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             return false;
         }
@@ -127,7 +126,7 @@ class OrderModel extends AppModel
                         JOIN shop.digital_description AS dd on od.digital_id = dd.digital_id
                         JOIN shop.digital d on d.id = od.digital_id
                         WHERE od.user_id = ? AND od.status = 1 AND dd.language_id = ?
-                        ORDER BY od.order_id ASC
+                        ORDER BY od.order_id
                         LIMIT ?, ?", [$user_id, $language['id'], $startDigitalID, $perPage]);
     }
 

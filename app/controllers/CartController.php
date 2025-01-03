@@ -11,7 +11,7 @@ use tumba\App;
 class CartController extends AppController
 {
 
-    public function addAction()
+    public function addAction(): bool
     {
         $lang = App::$appReg->getProperty('language');
         $id = get('id');
@@ -38,7 +38,7 @@ class CartController extends AppController
         $this->loadView('cart_modal');
     }
 
-    public function deleteAction()
+    public function deleteAction(): bool
     {
         $id = get('id');
         if (!$id) {
@@ -65,7 +65,6 @@ class CartController extends AppController
 
     public function checkoutAction()
     {
-//        debug($_SESSION, 1);
         if (!empty($_POST)) {
 //            регистрация пользователя, если он не авторизован
             if (!UserModel::isAuthorized()) {
