@@ -9,3 +9,5 @@ vendor/phpmailer/
 HTML layout/
 AdminLTE-3.2.0/
 /public/downloads/
+/public/adminlte/plugins/
+/public/adminlte/dist/
