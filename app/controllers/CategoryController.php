@@ -30,7 +30,7 @@ class CategoryController extends AppController
 
         $perPage = get('per_page');
         if (!$this->model->isCorrectPerPage($perPage)) {
-            $perPage = App::$appReg->getProperty('pagination');
+            $perPage = App::$appReg->getProperty('paginationProducts');
         }
 
 

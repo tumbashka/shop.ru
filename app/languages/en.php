@@ -7,6 +7,9 @@ return [
     'tpl_signup' => 'Sign up',
     'tpl_logout' => 'Logout',
     'tpl_cabinet' => 'Cabinet',
+    'tpl_orders' => 'Orders',
+    'tpl_orders_files' => 'Files',
+    'tpl_user_credentials' => 'Credentials',
 
     'tpl_information' => 'Information',
     'tpl_main_page' => 'Main page',
@@ -33,7 +36,7 @@ return [
     'tpl_error_404' => 'Error 404',
     'tpl_page_not_found' => 'Page not found',
     'tpl_to_home' => 'To main page',
-    'tpl_total_pagination' => ['product out of', 'products out of', 'items out of'],
+    'tpl_total_pagination' => ['product out of', 'products out of', 'products out of'],
 
     'tpl_wishlist_add_success' => 'The product has been added to your favorites',
     'tpl_wishlist_add_error' => 'Error adding product to favorites',

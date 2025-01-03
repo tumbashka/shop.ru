@@ -7,6 +7,10 @@ return [
     'tpl_signup' => 'Регистрация',
     'tpl_logout' => 'Выход',
     'tpl_cabinet' => 'Кабинет',
+    'tpl_orders' => 'Заказы',
+    'tpl_orders_files' => 'Файлы',
+    'tpl_user_credentials' => 'Учетные данные',
+
 
     'tpl_information' => 'Информация',
     'tpl_main_page' => 'Главная',
@@ -25,8 +29,8 @@ return [
     'tpl_place_an_order' => 'Оформить заказ',
     'tpl_clear_cart' => 'Очистить корзину',
     'tpl_empty_cart' => 'Корзина пуста',
-    'tpl_total_quantity' => 'Общее количество',
-    'tpl_total_price' => 'Итоговая стоимость',
+    'tpl_total_quantity' => 'Итого',
+    'tpl_total_price' => 'Сумма',
     'tpl_pcs' => 'шт',
 
     'tpl_home_breadcrumbs' => '<i class="fas fa-home"></i>',

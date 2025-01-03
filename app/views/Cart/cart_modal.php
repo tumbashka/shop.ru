@@ -43,7 +43,7 @@
 <div class="modal-footer">
     <?php if (!empty($_SESSION['cart'])): ?>
         <button type="button" id="clear-cart" class="btn btn-danger"><?= getLang('tpl_clear_cart') ?></button>
-        <button type="button" class="btn btn-primary"><?= getLang('tpl_place_an_order') ?></button>
+        <a href="cart/view" type="button" class="btn btn-primary"><?= getLang('tpl_place_an_order') ?></a>
     <?php endif; ?>
     <button type="button" class="btn btn-success ripple"
             data-bs-dismiss="modal"><?= getLang('tpl_continue_shopping') ?></button>

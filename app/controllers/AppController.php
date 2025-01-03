@@ -16,6 +16,7 @@ class AppController extends AbstractController
         parent::__construct($route);
         new AppModel();
 
+
         App::$appReg->setProperty('languages', Language::getLanguages());
         App::$appReg->setProperty('language', Language::getLanguage(App::$appReg->getProperty('languages')));
 

@@ -14,7 +14,6 @@ abstract class AbstractController
         public $route = []
     )
     {
-        //debug($this->route);
     }
 
     public function getModel(): void

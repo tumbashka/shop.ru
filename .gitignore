@@ -2,6 +2,10 @@
 .idea/
 tmp/
 config/config_db.php
+config/smtp.php
 vendor/gabordemooij/
 vendor/vlucas/
+vendor/phpmailer/
 HTML layout/
+AdminLTE-3.2.0/
+/public/downloads/

@@ -27,6 +27,7 @@ class UserModel extends AppModel
             ['password', 255],
             ['email', 255],
         ],
+        'optional' => ['email','password'],
     ];
 
     public array $labels = [

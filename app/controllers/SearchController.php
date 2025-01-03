@@ -18,7 +18,7 @@ class SearchController extends AppController
         $lang = App::$appReg->getProperty('language');
         $page = get('page');
         $countProducts = $this->model->getCountFoundedProducts($s, $lang);
-        $perPage = App::$appReg->getProperty('pagination');
+        $perPage = App::$appReg->getProperty('paginationProducts');
         $pagination = new Pagination($page, $perPage, $countProducts);
 
         $products = $this->model->getFoundedProducts($s, $lang, $pagination->getStart(), $perPage);

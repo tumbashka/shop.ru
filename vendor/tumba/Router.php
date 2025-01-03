@@ -28,7 +28,6 @@ class Router
     {
         $url = self::removeQueryString($url);
         if (self::matchRoute($url)) {
-//            debug(self::$route);
             if(!empty(self::$route['lang'])) {
                 App::$appReg->setProperty('lang', self::$route['lang']);
             }
@@ -38,6 +37,7 @@ class Router
                 $controllerObject = new $controller(self::$route);
                 $controllerObject->getModel();
                 $action = self::getFormattedActionName();
+
                 if (method_exists($controllerObject, $action)) {
                     $controllerObject->$action();
                     $controllerObject->getView();
@@ -51,6 +51,7 @@ class Router
 
             throw new \Exception("Страница не найдена", 404);
         }
+
     }
 
     public static function matchRoute($url): bool

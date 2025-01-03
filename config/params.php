@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'adminEmail' => 'admin@shop.ru',
+    'adminEmail' => 'tumbashka@vk.com',
     'site_name' => 'ShooP',
-    'pagination' => 5,
+    'paginationProducts' => 5,
+    'paginationCabinet' => 6,
 ];
