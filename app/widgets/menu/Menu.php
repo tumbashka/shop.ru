@@ -55,6 +55,7 @@ class Menu
     protected function getTree()
     {
         $tree = [];
+
         $data = $this->data;
         foreach ($data as $id => &$node) {
             if (!$node['parent_id']) {

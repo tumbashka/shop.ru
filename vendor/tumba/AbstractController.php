@@ -12,8 +12,10 @@ abstract class AbstractController
 
     public function __construct(
         public $route = []
+
     )
     {
+        App::$appReg->setProperty('route', $this->route);
     }
 
     public function getModel(): void

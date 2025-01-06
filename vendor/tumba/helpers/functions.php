@@ -116,3 +116,19 @@ function sessionFormData($fieldName): string
         return "";
     }
 }
+
+function get_field_array_value($array, ...$keys)
+{
+    $item = $array;
+    $counter = 0;
+    foreach ($keys as $key => $value) {
+        if (isset($item[$value])) {
+            $item = $item[$value];
+            $counter++;
+        }
+    }
+    if ($counter == count($keys)) {
+        return $item;
+    }
+    return null;
+}

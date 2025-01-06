@@ -43,6 +43,20 @@ section {
     padding: 50px 0;
 }
 
+.image-style-align-center {
+     text-align: center;
+}
+.image-style-align-left {
+    float: left;
+    margin-right: 20px;
+    max-width: 50%;
+}
+.image-style-align-right{
+    float: right;
+    margin-left: 20px;
+    max-width: 50%;
+}
+
 .section-title {
     overflow: hidden;
     text-transform: uppercase;
