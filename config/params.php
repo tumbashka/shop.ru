@@ -8,5 +8,6 @@ return [
     'paginationAdminFiles' => 10,
     'paginationAdminOrders' => 10,
     'paginationAdminUsers' => 12,
+    'paginationAdminPages' => 8,
     'paginationCabinet' => 6,
 ];

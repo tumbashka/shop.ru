@@ -26,10 +26,10 @@ class CacheController extends AppController
         $cacheKey = get('cache', 's');
         switch ($cacheKey) {
             case 'page':
-                $cacheKey = 'shop_menu';
+                $cacheKey = 'shop_page_menu';
                 break;
             case 'category':
-                $cacheKey = 'shop_page_menu';
+                $cacheKey = 'shop_menu';
                 break;
         }
         $langs = App::$appReg->getProperty('languages');
