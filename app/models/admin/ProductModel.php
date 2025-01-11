@@ -200,4 +200,21 @@ class ProductModel extends AppModel
 
     }
 
+    public function delete( $id)
+    {
+        R::begin();
+        try {
+            R::exec('DELETE FROM shop.product_gallery pg WHERE pg.id = ?', [$id]);
+            R::exec('DELETE FROM shop.product_digital pd WHERE pd.product_id = ?', [$id]);
+            R::exec('DELETE FROM shop.product_description pd WHERE pd.product_id = ?', [$id]);
+            R::exec('DELETE FROM shop.product p WHERE p.id = ?', [$id]);
+
+            R::commit();
+            return true;
+        } catch (\Exception $e) {
+            R::rollback();
+            return false;
+        }
+    }
+
 }

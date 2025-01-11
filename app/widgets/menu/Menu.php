@@ -2,7 +2,6 @@
 
 namespace app\widgets\menu;
 
-use RedBeanPHP\R;
 use tumba\App;
 use tumba\Cache;
 

@@ -97,4 +97,15 @@ class ProductController extends AppController
         }
         return trim($nameOnAllLangs, $separator);
     }
+    public function deleteAction()
+    {
+        $id = get('id');
+
+        if ($this->model->delete($id)) {
+            $_SESSION['success'] = 'Товар успешно удален';
+        } else {
+            $_SESSION['errors'] = 'Ошибка удаления товара';
+        }
+        redirect();
+    }
 }

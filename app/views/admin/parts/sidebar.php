@@ -12,7 +12,7 @@
         <!-- Sidebar user (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="<?= PATH ?>/adminlte/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
+                <img src="<?= PATH ?>/adminlte/dist/img/user_pic.jpg" class="img-circle elevation-2"
                      alt="User Image">
             </div>
             <div class="info">
@@ -61,6 +61,54 @@
                         <i class="nav-icon fas fa-cubes"></i>
                         <p>
                             Товары
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= ADMIN ?>/download" class="nav-link">
+                        <i class="nav-icon fas fa-upload"></i>
+                        <p>
+                            Файлы
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= ADMIN ?>/order" class="nav-link">
+                        <i class="nav-icon fas fas fa-shopping-bag"></i>
+                        <p>
+                            Заказы
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= ADMIN ?>/user" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Пользователи
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= ADMIN ?>/cache" class="nav-link">
+                        <i class="nav-icon fas fa-database"></i>
+                        <p>
+                            Управление кэшем
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= ADMIN ?>/page" class="nav-link">
+                        <i class="nav-icon fas fa-sticky-note"></i>
+                        <p>
+                            Страницы
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= ADMIN ?>/slider" class="nav-link">
+                        <i class="nav-icon fas fa-image"></i>
+                        <p>
+                            Слайдер
                         </p>
                     </a>
                 </li>

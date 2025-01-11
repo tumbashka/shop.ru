@@ -15,7 +15,6 @@ use tumba\View;
                 <div class="col-md-3 col-6">
                     <h4><?= getLang('tpl_information') ?></h4>
                     <?php new \app\widgets\page\Page([
-                        'cacheTime' => 0,
                         'class' => 'list-unstyled',
                         'prepend' => '<li><a href="' . base_url() . '">' . getLang('tpl_main_page') . '</a></li>'
                     ]) ?>
